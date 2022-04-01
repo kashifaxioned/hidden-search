@@ -84,6 +84,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
+  background-color: #765bed;
   font-family: sans-serif;
 }
 
@@ -99,9 +100,10 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*=================================
   Header styling starts here
@@ -120,10 +122,39 @@ li {
   main styling starts here
 =================================*/
 
+.search-form {
+  display: flex;
+  align-items: center;
+}
 
+.search-inp {
+  border: none;
+  padding: 18px 16px;
+  font-size: 16px;
+  outline: none;
+}
 
+.search-btn {
+  border: none;
+  padding: 12px 0;
+  background-color: #fff;
+  text-indent: -55%;
+  overflow: hidden;
+}
 
+.search-btn::after{
+  content: "\f002";
+  font-family: "FontAwesome";
+  font-size: 30px;
+  padding: 10px 0 10px 26px;
+}
 
+.slideRight { animation: slideRight 1s; }
+
+@keyframes slideRight {
+  from { transform: translateX(-100px); }
+  to { transform: translateX(0); }
+}
 
 
 
