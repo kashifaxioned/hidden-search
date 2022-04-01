@@ -127,6 +127,8 @@ li {
   align-items: center;
 }
 
+.form-group { display: none; }
+
 .search-inp {
   border: none;
   padding: 18px 16px;
