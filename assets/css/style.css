@@ -84,6 +84,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
+  background-color: #765bed;
   font-family: sans-serif;
 }
 
@@ -99,9 +100,12 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  width: 16%;
+  height: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*=================================
   Header styling starts here
@@ -120,12 +124,47 @@ li {
   main styling starts here
 =================================*/
 
+.search-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hide-inp {
+  width: 0;
+  border: none;
+  padding: 0;
+}
 
 
+.search-btn {
+  position: absolute;
+  left: 0;
+  border: none;
+  padding: 12px 0;
+  background-color: #fff;
+  text-indent: -55%;
+  overflow: hidden;
+  transition: transform 1s ease;
+}
 
+.search-btn::after{
+  content: "\f002";
+  font-family: "FontAwesome";
+  font-size: 30px;
+  padding: 10px 0 10px 26px;
+}
 
+.show-inp {
+  width: 70%;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  outline: none;
+  transition: width 1s ease;
+}
 
-
+.slide-btn { transform: translateX(190px); }
 
 /*=================================
   main styling ends here
